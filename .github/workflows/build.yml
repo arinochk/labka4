@@ -11,7 +11,7 @@ jobs:
 
       - name: Building hello_world_application
         shell: bash
-        run:
+        run: |
           cd hello_world_application
           cmake -B ./build
           ls
@@ -30,7 +30,7 @@ jobs:
 
         - name: Building solver_application
           shell: bash
-          run:
+          run: |
             cd solver_application
             cmake -B ./build
             cd build
