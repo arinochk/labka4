@@ -11,12 +11,15 @@ jobs:
 
       - name: Building hello_world_application
         shell: bash
-        working-directory: ./hello_world_application
         run:
+          cd hello_world_application
           cmake -B ./build
+          ls
           cd build
           make
-          ./build/hello_world
+          ./hello_world
+          cd ../..
+
   build_sovler_application:
     runs-on: ubuntu-latest
 
@@ -26,9 +29,10 @@ jobs:
 
         - name: Building solver_application
           shell: bash
-          working-directory: ./solver_application
           run:
+            cd solver_application
             cmake -B ./build
             cd build
             make
-            ./build/equation
+            ./equation
+            cd ../..
