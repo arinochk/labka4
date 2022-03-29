@@ -18,7 +18,8 @@ jobs:
           cd build
           make
           ./hello_world
-          cd ../..
+          cd ..
+          cd ..
 
   build_sovler_application:
     runs-on: ubuntu-latest
@@ -35,4 +36,5 @@ jobs:
             cd build
             make
             ./equation
-            cd ../..
+            cd ..
+            cd ..
